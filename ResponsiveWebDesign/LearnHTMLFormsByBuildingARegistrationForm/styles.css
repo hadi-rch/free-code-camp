@@ -43,12 +43,17 @@ select {
   margin: 10px 0 0 0;
 }
 
-/* Step 53
-If you look close enough, you will notice the 
-.inline elements are too high on the line.
-To combat this, set the vertical-align property to middle. */
+/* Step 54 To make the input and textarea elements blend in with the background theme,
+set their background-color to #0a0a23. Then,
+give them a 1px,
+solid border with a color of #0a0a23.  */
+input, textarea {
+  background-color: #0a0a23;
+  border: 1px solid #0a0a23;
+}
+
 .inline {
   width: unset;
-  margin: 0 0.5em 0 0; 
+  margin: 0 0.5em 0 0;
   vertical-align: middle;
 }
