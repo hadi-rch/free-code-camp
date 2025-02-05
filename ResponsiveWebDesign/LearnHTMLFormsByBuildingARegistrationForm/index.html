@@ -44,17 +44,19 @@
           Business</label
         >
       </fieldset>
-      <fieldset></fieldset>
-      <!-- Step 31
-      Add the text I accept the terms and conditions immediately 
-      after the input element in the newly added label. 
-      Then link the text terms and conditions to the following location:
-      Example Code
-      https://www.freecodecamp.org/news/terms-of-service/ -->
-
-      <label for="terms-and-conditions"
-        ><input type="checkbox" required id="terms-and-conditions" />
-        I accept the <a href="https://www.freecodecamp.org/news/terms-of-service/"> terms and conditions
+      <!-- Step 32 Moving on to the final fieldset. Whaat if you wanted to allow a
+      user to upload a profile picture? Well, the input type file allows just
+      that. Add a label with the text Upload a profile picture: , and nest an
+      input accepting a file upload. -->
+      <fieldset>
+        <label>Upload a profile picture: <input type="file"/></label>
+      </fieldset>
+      <label for="terms-and-conditions">
+        <input type="checkbox" required id="terms-and-conditions" /> 
+        I accept the
+        <a href="https://www.freecodecamp.org/news/terms-of-service/">
+          terms and conditions
+        </a>
       </label>
       <input type="submit" value="Submit" />
     </form>
