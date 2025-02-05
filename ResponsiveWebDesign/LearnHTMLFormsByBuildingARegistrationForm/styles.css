@@ -1,7 +1,3 @@
-/* Step 43
-The HTML for the registration form is finished. Now, you can spruce it up a bit.
-Start by changing the font to Tahoma, and the font size to 16px in the body. */
-
 body {
   width: 100%;
   height: 100vh;
@@ -11,6 +7,14 @@ body {
   font-family: Tahoma;
   font-size: 16px;
 }
+
+/* Step 44 Center the h1 and p elements by giving them a margin of 1em auto. Then,
+align their text in the center as well.  */
+h1, p{
+  margin: 1em auto;
+  text-align: center;
+}
+
 label {
   display: block;
   margin: 0.5rem 0;
