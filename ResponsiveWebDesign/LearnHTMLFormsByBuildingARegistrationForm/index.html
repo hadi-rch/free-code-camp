@@ -9,11 +9,11 @@
     <h1>Registration Form</h1>
     <p>Please fill out this form with the required information</p>
     <form action="https://register-demo.freecodecamp.org" method="post">
-      <!-- Step 21 At this point, you should be able to submit the form. However, you
-      might notice not much happens. To make the form more interactive, add the
-      required attribute to the input elements in the first fieldset. Now, if
-      you try to submit the form without filling in the required fields, you
-      will see an error message. -->
+      <!-- Step 22 Certain type attribute values come with built-in form validation.
+      For example, type="email" requires that the value be a valid email
+      address. Add custom validation to the password input element, by adding a
+      minlength attribute with a value of 8. Doing so prevents inputs of less
+      than 8 characters being submitted. -->
       <fieldset>
         <label for="first-name"
           >Enter Your First Name: <input id="first-name" type="text" required
@@ -26,7 +26,7 @@
         /></label>
         <label for="new-password"
           >Create a New Password:
-          <input id="new-password" type="password" required
+          <input id="new-password" type="password" required minLength="8"
         /></label>
       </fieldset>
       <fieldset></fieldset>
