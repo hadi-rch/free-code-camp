@@ -28,15 +28,13 @@
             pattern="[a-z0-5]{8,}"
         /></label>
       </fieldset>
-      <!-- Step 26
-      Within each corresponding label element, and immediately after the input element, 
-      add a space and add the following text:
-      Example Code
-      Personal 
-      Business  -->
+      <!-- Step 27 You only want one radio input to be selectable at a time. However,
+      the form does not know the radio inputs are related. To relate the radio
+      inputs, give them the same name attribute with a value of account-type.
+      Now, it is not possible to select both radio inputs at the same time. -->
       <fieldset>
-        <label><input type="radio" /> Personal</label>
-        <label><input type="radio" /> Business </label>
+        <label><input type="radio" name="account-type"/> Personal</label>
+        <label><input type="radio" name="account-type"/> Business</label>
       </fieldset>
       <fieldset></fieldset>
       <input type="submit" value="Submit" />
