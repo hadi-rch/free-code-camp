@@ -105,6 +105,16 @@ button1.onclick = goStore;
 button2.onclick = goCave;
 button3.onclick = fightDragon;
 
+// Step 141
+// In order for the &#x2620; emoticon text to properly display on the page, you will need to use the innerHTML property.
+// The innerHTML property allows you to access or modify the content inside an HTML element using JavaScript.
+// Here is an example of updating the content for this paragraph element using the innerHTML property.
+// Example Code
+// <p id="demo">This is a paragraph.</p>
+// Example Code
+// document.querySelector("#demo").innerHTML = "Hello, innerHTML!";
+// In the update function, change text.innerText to text.innerHTML.
+
 function update(location) {
   monsterStats.style.display = "none";
   button1.innerText = location["button text"][0];
@@ -113,7 +123,7 @@ function update(location) {
   button1.onclick = location["button functions"][0];
   button2.onclick = location["button functions"][1];
   button3.onclick = location["button functions"][2];
-  text.innerText = location.text;
+  text.innerHTML = location.text;
 }
 
 function goTown() {
@@ -191,9 +201,6 @@ function goFight() {
   monsterName.innerText = monsters[fighting].name;
   monsterHealthText.innerText = monsterHealth;
 }
-// Step 140
-// Back to your attack function - inside the else if block, create another if and else statement. If the player is fighting the dragon (fighting would be 2), call the winGame function. Move the defeatMonster() call to the else block.
-// For this step, you will need to use the strict equality (===) operator to check if fighting is equal to 2.
 
 function attack() {
   text.innerText = "The " + monsters[fighting].name + " attacks.";
