@@ -92,7 +92,17 @@ const locations = [
     "button functions": [goTown, goTown, goTown],
     text: 'The monster screams "Arg!" as it dies. You gain experience points and find gold.',
   },
+  {
+    name: "lose",
+    "button text": ["REPLAY?", "REPLAY?", "REPLAY?"],
+    "button functions": [restart, restart, restart],
+    text: "You die. &#x2620;"
+  },
 ];
+// Step 139
+// In the locations array, add another object at the end. Set the name property to "lose", set "button text" to an array with three "REPLAY?" strings, set "button functions" to an array with three restart variables, and set text to "You die. &#x2620;".
+// In a later step, you will update the code for the &#x2620; emoticon text to properly display on the page.
+
 
 // initialize buttons.
 button1.onclick = goStore;
@@ -216,10 +226,7 @@ function defeatMonster() {
 function lose() {
   update(locations[5]);
 }
-// Step 138
-// At the end of your code, create a restart function. Inside this function, set xp to 0, health to 100, gold to 50, currentWeaponIndex to 0, and set inventory to an array with the string stick.
-// Also update the innerText properties of goldText, healthText, and xpText to their current values.
-// Finally, call the goTown() function.
+
 function restart() {
   xp = 0;
   health = 100;
