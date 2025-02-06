@@ -121,21 +121,21 @@ function buyWeapon() {
     button2.onclick = sellWeapon;
   }
 }
-// Step 105
-// The next step is to create a variable called currentWeapon.
+// Step 106
+// In the previous project, you learned how to work with the shift() method to 
+// remove the first element from an array like this:
 // Example Code
-// let num = 1;
-// if (num === 1) {
-//   let num = 2; // this num is scoped to the if statement
-//   console.log(num); // expected output: 2
-// }
-// console.log(num); // expected output: 1 (the global variable)
-// Use the let keyword to create a variable named currentWeapon. Don't assign it a value yet.
+// const myArray = ["first", "second", "third"];
+// const firstElement = myArray.shift();
+// // myArray is now ["second", "third"]
+// Use the shift() method to take the first element from the inventory array and 
+// assign it to your currentWeapon variable.
 function sellWeapon() {
-  let currentWeapon;
   if (inventory.length > 1) {
     gold += 15;
     goldText.innerText = gold;
+    let currentWeapon;
+    currentWeapon = inventory.shift();
   }
 }
 function fightSlime() {}
