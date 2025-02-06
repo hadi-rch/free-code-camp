@@ -20,14 +20,21 @@ const monsterHealthText = document.querySelector("#monsterHealth");
 button1.onclick = goStore;
 button2.onclick = goCave;
 button3.onclick = fightDragon;
-// Step 45
-// You need to wrap the text Store in double quotes. Because your string 
-// is already wrapped in double quotes, you'll need to escape the quotes 
-// around Store. You can escape them with a backslash \. Here is an example:
-
+// Step 46
+// You have repetition in the goTown and goStore functions. 
+// Repetition in your code is a sign that you need another function.
+// In the previous project, you learned how to work with function parameters like this:
 // Example Code
-// const escapedString = "Naomi likes to play \"Zelda\" sometimes.";
-// Wrap the text Store in double quotes within your text.innerText line.
+// function myFunction(param) {
+//   console.log(param);
+// }
+// Function parameters act as placeholders for values that you pass to the function when you call it.
+// Create an empty update function that takes a parameter called location.
+
+function update(location){
+  
+}
+
 function goTown() {
   button1.innerText = "Go to store";
   button2.innerText = "Go to cave";
