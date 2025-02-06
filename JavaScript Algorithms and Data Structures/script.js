@@ -21,9 +21,6 @@ button1.onclick = goStore;
 button2.onclick = goCave;
 button3.onclick = fightDragon;
 
-// Step 41
-// Now you need to modify your display text. Change the innerText 
-// property of the text variable to be "You enter the store.".
 function goStore() {
   button1.innerText = "Buy 10 health (10 gold)";
   button2.innerText = "Buy weapon (30 gold)";
@@ -38,4 +35,18 @@ function goCave() {
 }
 function fightDragon() {
   console.log("Fighting dragon.");
+}
+// Step 42
+// Create three new empty functions called buyHealth, buyWeapon, and goTown.
+
+function buyHealth(){
+  
+}
+
+function buyWeapon(){
+  
+}
+
+function goTown(){
+  
 }
