@@ -16,16 +16,17 @@ const monsterStats = document.querySelector("#monsterStats");
 const monsterName = document.querySelector("#monsterName");
 const monsterHealthText = document.querySelector("#monsterHealth");
 
-// Step 57
-// Create another property in your object called button functions. 
-// Give this property an array containing the three functions assigned 
-// to the onclick properties in the goTown function. Remember that these 
-// functions are variables, not strings, and should not be wrapped in quotes.
+// Step 58
+// Add one final property to the object named text. 
+// Give this property the same string value as the one assigned to 
+// text.innerText in the goTown function.
+
 const locations = [
   {
     name: "town square",
     "button text": ["Go to store","Go to cave","Fight dragon"],
-    "button functions": [goStore,goCave,fightDragon]
+    "button functions": [goStore,goCave,fightDragon],
+    text: "You are in the town square. You see a sign that says \"Store\"."
   }
 ];
 
