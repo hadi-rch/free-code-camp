@@ -166,10 +166,7 @@ function fightDragon() {
   fighting = 2;
   goFight();
 }
-// Step 119
-// Now, you will need to update the text for the current monster's name and health.
-// Start by assigning monsters[fighting].name to the innerText property of monsterName. 
-// Then, assign monsterHealth to the innerText property of monsterHealthText.
+
 function goFight() {
   update(locations[3]);
   monsterHealth = monsters[fighting].health;
@@ -177,5 +174,11 @@ function goFight() {
   monsterName.innerText = monsters[fighting].name;
   monsterHealthText.innerText = monsterHealth;
 }
-function attack() {}
+// Step 120
+// Now you can build the attack function. First, update the text message 
+// to say "The <monster name> attacks.", replacing <monster name> with the 
+// name of the monster. Remember you can use the concatenation operator for this.
+function attack() {
+  text.innerText = "The " + monsters[fighting].name + " attacks.";
+}
 function dodge() {}
