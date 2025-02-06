@@ -166,11 +166,13 @@ function fightDragon() {
   fighting = 2;
   goFight();
 }
-// Step 116
-// In the goFight function, call your update function with the fourth object in
-// locations as an argument.
+// Step 117
+// Below your update call, set the monsterHealth to be the health of the current monster. 
+// You can get this value by accessing the health property of monsters[fighting] 
+// with dot notation.
 function goFight() {
   update(locations[3]);
+  monsterHealth =  monsters[fighting].health;
 }
 function attack() {}
 function dodge() {}
