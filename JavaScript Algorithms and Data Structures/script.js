@@ -101,12 +101,6 @@ function buyHealth() {
   }
 }
 
-// Step 101
-// Once a player has the most powerful weapon, you can give 
-// them the ability to sell their old weapons.
-// In the outer else statement, set button2.innerText to "Sell weapon for 15 gold". 
-// Also set button2.onclick to the function name sellWeapon.
-
 function buyWeapon() {
   if (currentWeaponIndex < weapons.length - 1) {
     if (gold >= 30) {
@@ -126,6 +120,11 @@ function buyWeapon() {
     button2.innerText = "Sell weapon for 15 gold";
     button2.onclick = sellWeapon;
   }
+}
+// Step 102
+// Create an empty sellWeapon function.
+function sellWeapon(){
+  
 }
 function fightSlime() {}
 function fightBeast() {}
