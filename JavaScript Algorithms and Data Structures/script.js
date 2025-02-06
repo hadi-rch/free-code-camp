@@ -196,3 +196,9 @@ function attack() {
   }
 }
 function dodge() {}
+function defeatMonster () {
+  
+}
+function lose () {
+  
+}
