@@ -1,14 +1,5 @@
 let xp = 0;
 let health = 100;
-// Step 97
-// Now it is time to test your buyWeapon function. Right now, the gold amount is set to 50. 
-// But to properly see the results of your buyWeapon function, the amount should be set 
-// to something higher.
-// Update the gold amount to 250.
-// NOTE: The HTML has already been updated to reflect this change.
-// To test your buyWeapon function, open up the console. Then click on the 
-// "Go to store" button followed by the "Buy weapon (30 gold)" button four times.
-
 let gold = 250;
 let currentWeaponIndex = 0;
 let fighting;
@@ -110,8 +101,17 @@ function buyHealth() {
   }
 }
 
+// Step 98
+// When you were testing your function, you should have seen an error message in the console. 
+// This error is due to the condition in the buyWeapon function.
+// The currentWeaponIndex variable is the index of the weapons array, but array 
+// indexing starts at zero. The index of the last element in an array is one less 
+// than the length of the array.
+// Change the if condition to check weapons.length - 1, instead of weapons.length.
+// Test out your buyWeapon function again to see the error message disappear.
+
 function buyWeapon() {
-  if (currentWeaponIndex < weapons.length) {
+  if (currentWeaponIndex < weapons.length-1) {
     if (gold >= 30) {
       gold -= 30;
       currentWeaponIndex++;
