@@ -107,13 +107,7 @@ function goCave() {
 function fightDragon() {
   console.log("Fighting dragon.");
 }
-// Step 111
-// Fighting each type of monster will use similar logic. 
-// Create an empty function called goFight to manage this logic.
-
-function goFight(){
-  
-}
+function goFight() {}
 
 function buyHealth() {
   if (gold >= 10) {
@@ -157,5 +151,13 @@ function sellWeapon() {
     text.innerText = "Don't sell your only weapon!";
   }
 }
-function fightSlime() {}
+// Step 112
+// In your fightSlime function, set fighting equal to 0 - the
+// index of slime in the monsters array. Remember that you already declared
+// fighting earlier in your code, so you do not need let or const here.
+// On the next line, call the goFight function.
+function fightSlime() {
+  fighting = 0;
+  goFight();
+}
 function fightBeast() {}
