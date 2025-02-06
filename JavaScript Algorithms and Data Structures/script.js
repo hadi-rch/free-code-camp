@@ -20,10 +20,14 @@ const monsterHealthText = document.querySelector("#monsterHealth");
 button1.onclick = goStore;
 button2.onclick = goCave;
 button3.onclick = fightDragon;
+// Step 45
+// You need to wrap the text Store in double quotes. Because your string 
+// is already wrapped in double quotes, you'll need to escape the quotes 
+// around Store. You can escape them with a backslash \. Here is an example:
 
-// Step 43
-// Move your goTown function above your goStore function. 
-// Then copy and paste the contents of the goStore function into the goTown function.
+// Example Code
+// const escapedString = "Naomi likes to play \"Zelda\" sometimes.";
+// Wrap the text Store in double quotes within your text.innerText line.
 function goTown() {
   button1.innerText = "Go to store";
   button2.innerText = "Go to cave";
@@ -31,7 +35,7 @@ function goTown() {
   button1.onclick = goStore;
   button2.onclick = goCave;
   button3.onclick = fightDragon;
-  text.innerText = "You are in the town square. You see a sign that says Store.";
+  text.innerText = "You are in the town square. You see a sign that says \"Store\".";
 }
 
 function goStore() {
