@@ -18,19 +18,20 @@ const monsterHealthText = document.querySelector("#monsterHealth");
 
 const locations  = [];
 
-// Step 48
-// Before you can begin to build out your locations array, you will first need to learn about objects. Objects are an important data type in JavaScript. The next few steps will be dedicated to learning about them so you will better understand how to apply them in your project.
-// Objects are non primitive data types that store key-value pairs. Non primitive data types are mutable data types that are not undefined, null, boolean, number, string, or symbol. Mutable means that the data can be changed after it is created.
-// Here is the basic syntax for an object:
+// Step 49
+// Objects are similar to arrays, except that instead of using indexes to access and modify their data, you access the data in objects through properties.
+// Properties consist of a key and a value. The key is the name of the property, and the value is the data stored in the property.
+// Here is an example of an object with a single property:
 // Example Code
-// {
-//   key: value
-// }
-// You will learn about keys and values in the next few steps.
-// For now, create a const variable called cat and assign it an empty object {}.
-// Below that cat variable, add a console.log(cat) statement to see the object in the console.
+// const obj = {
+//   name: "Quincy Larson"
+// };
+// Inside your cat object, add a new property. The key should be name and the value should be the string "Whiskers".
+// Open up the console to see the updates to your object.
 
-const cat = {};
+const cat = {
+  name: "Whiskers"
+};
 console.log(cat);
 
 // initialize buttons.
