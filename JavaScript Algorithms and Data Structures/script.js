@@ -25,13 +25,13 @@ button3.onclick = fightDragon;
 // Move your goTown function above your goStore function. 
 // Then copy and paste the contents of the goStore function into the goTown function.
 function goTown() {
-  button1.innerText = "Buy 10 health (10 gold)";
-  button2.innerText = "Buy weapon (30 gold)";
-  button3.innerText = "Go to town square";
-  button1.onclick = buyHealth;
-  button2.onclick = buyWeapon;
-  button3.onclick = goTown;
-  text.innerText = "You enter the store.";
+  button1.innerText = "Go to store";
+  button2.innerText = "Go to cave";
+  button3.innerText = "Fight dragon";
+  button1.onclick = goStore;
+  button2.onclick = goCave;
+  button3.onclick = fightDragon;
+  text.innerText = "You are in the town square. You see a sign that says Store.";
 }
 
 function goStore() {
