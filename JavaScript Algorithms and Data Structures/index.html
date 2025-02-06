@@ -1,13 +1,5 @@
 <!DOCTYPE html>
 <html lang="en">
-  <!-- Step 16
-  We have run into a slight problem. You are trying to query your 
-  page for a button element, but your script tag is in the head of 
-  your HTML. This means your code runs before the browser has finished 
-  reading the HTML, and your document.querySelector() will not see 
-  the button - because the browser hasn't processed it yet.
-  To fix this, move your script element out of the head element, 
-  and place it at the end of your body element (just before the closing </body> tag). -->
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -35,7 +27,7 @@
       <div id="monsterStats"></div>
       <div id="text"></div>
     </div>
-    
+
     <script src="./script.js"></script>
   </body>
 </html>
