@@ -1,6 +1,6 @@
 let xp = 0;
-let health= 100;
-let gold= 50;
+let health = 100;
+let gold = 50;
 let currentWeaponIndex = 0;
 let fighting;
 let monsterHealth;
@@ -15,9 +15,11 @@ const goldText = document.querySelector("#goldText");
 const monsterStats = document.querySelector("#monsterStats");
 const monsterName = document.querySelector("#monsterName");
 const monsterHealthText = document.querySelector("#monsterHealth");
-// Step 32
-// For now, make your goStore function output 
-// the message "Going to store." to the console.
-function goStore(){
-    console.log("Going to store.");
+function goStore() {
+  console.log("Going to store.");
+}
+// Step 33
+// Now create a goCave function that prints "Going to cave." to the console.
+function goCave() {
+  console.log("Going to cave.");
 }
