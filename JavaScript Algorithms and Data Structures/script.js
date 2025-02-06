@@ -104,7 +104,6 @@ function goStore() {
 function goCave() {
   update(locations[2]);
 }
-function goFight() {}
 
 function buyHealth() {
   if (gold >= 10) {
@@ -166,3 +165,8 @@ function fightDragon() {
   fighting = 2;
   goFight();
 }
+function goFight() {}
+// Step 114
+// At the end of your code, create two empty functions named attack and dodge.
+function attack() {}
+function dodge() {}
