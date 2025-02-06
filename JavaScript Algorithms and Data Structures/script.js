@@ -54,12 +54,6 @@ function goTown() {
   update(locations[0]);
 }
 
-// Step 69
-// Now update your goStore function to call the update function. 
-// Pass the second element of the locations array as your argument.
-// To make sure your refactoring is correct, try clicking your first 
-// button again. You should see the same changes to your webpage that you saw earlier.
-
 function goStore() {
   update(locations[1]);
 }
@@ -72,4 +66,15 @@ function fightDragon() {
 
 function buyHealth() {}
 
-function buyWeapon() {}
+function buyWeapon() {
+
+}
+// Step 70
+// Create two more empty functions named fightSlime and fightBeast. 
+// These functions will be used in your upcoming cave object.
+function fightSlime() {
+  
+}
+function fightBeast() {
+
+}
