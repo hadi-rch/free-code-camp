@@ -105,16 +105,6 @@ button1.onclick = goStore;
 button2.onclick = goCave;
 button3.onclick = fightDragon;
 
-// Step 141
-// In order for the &#x2620; emoticon text to properly display on the page, you will need to use the innerHTML property.
-// The innerHTML property allows you to access or modify the content inside an HTML element using JavaScript.
-// Here is an example of updating the content for this paragraph element using the innerHTML property.
-// Example Code
-// <p id="demo">This is a paragraph.</p>
-// Example Code
-// document.querySelector("#demo").innerHTML = "Hello, innerHTML!";
-// In the update function, change text.innerText to text.innerHTML.
-
 function update(location) {
   monsterStats.style.display = "none";
   button1.innerText = location["button text"][0];
@@ -235,6 +225,12 @@ function defeatMonster() {
 
 function lose() {
   update(locations[5]);
+}
+// Step 142
+// After the lose function, create a function called winGame. Inside the winGame function, call the update function and pass in locations[6].
+
+function winGame (){
+  update(locations[6]);
 }
 
 function restart() {
