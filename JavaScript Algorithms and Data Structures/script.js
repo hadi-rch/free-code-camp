@@ -33,7 +33,20 @@ const locations = [
     "button functions": [buyHealth, buyWeapon, goTown],
     text: "You enter the store.",
   },
+  {
+    name: "cave",
+    "button text": ["Fight slime", "Fight fanged beast", "Go to town square"],
+    "button functions": [fightSlime, fightBeast, goTown],
+    text: "You enter the cave. You see some monsters.",
+  },
 ];
+// Step 71
+// Add a third object to the locations array. Give it the same properties as the other two objects.
+// Set name to cave. Set button text to an array with the strings
+// "Fight slime", "Fight fanged beast", and "Go to town square".
+// Set the "button functions" to an array with the variables
+// fightSlime, fightBeast, and goTown. Set the text property to
+// "You enter the cave. You see some monsters.".
 
 // initialize buttons.
 button1.onclick = goStore;
@@ -66,15 +79,6 @@ function fightDragon() {
 
 function buyHealth() {}
 
-function buyWeapon() {
-
-}
-// Step 70
-// Create two more empty functions named fightSlime and fightBeast. 
-// These functions will be used in your upcoming cave object.
-function fightSlime() {
-  
-}
-function fightBeast() {
-
-}
+function buyWeapon() {}
+function fightSlime() {}
+function fightBeast() {}
