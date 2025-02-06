@@ -18,25 +18,27 @@ const monsterHealthText = document.querySelector("#monsterHealth");
 
 const locations  = [];
 
-// Step 51
-// There are two ways to access the properties of an object: dot notation (.) and bracket notation ([]), similar to an array.
-// Dot notation is what you use when you know the name of the property you're trying to access ahead of time.
-// Example Code
-// object.property;
-// Here is a sample of using dot notation (.) to read the name property of the developer object:
-// Example Code
-// const developer = {
-//   name: "Jessica",
-// }
-// // Output: Jessica
-// console.log(developer.name); 
-// Update your console statement to access the name property of the cat object using dot notation.
-// Open up the console to see the name of "Whiskers" logged to the console.
 const cat = {
   name: "Whiskers",
   "Number of legs": 4
 };
+
+// Step 52
+// The second way to access the properties of an object is bracket notation ([]). If the property of the object you are trying to access has a space in its name, you will need to use bracket notation.
+// Example Code
+// objectName["property name"];
+// Here is a sample of using bracket notation to read an object's property:
+// Example Code
+// const spaceObj = {
+//   "Space Name": "Kirk",
+// };
+// spaceObj["Space Name"]; // "Kirk"
+// Update your console statement to use bracket notation to access the property "Number of legs" of the cat object.
+// Open up the console to see the output.
+
 console.log(cat.name);
+console.log(cat["Number of legs"]);
+
 
 // initialize buttons.
 button1.onclick = goStore;
