@@ -63,11 +63,6 @@ function goTown() {
 function goStore() {
   update(locations[1]);
 }
-// Step 72
-// Now that you have a "cave" location object, update your goCave function 
-// to call update and pass that new "cave" location. Remember that this is 
-// the third element in your locations array.
-// Don't forget to remove your console.log call!
 
 function goCave() {
   update(locations[2]);
@@ -76,7 +71,14 @@ function fightDragon() {
   console.log("Fighting dragon.");
 }
 
-function buyHealth() {}
+// Step 73
+// Now that your "store" and "cave" locations are complete, you can code the
+// actions the player takes at those locations. Inside the buyHealth function,
+// set gold equal to gold minus 10.
+// For example, here is how you would set num equal to 5 less than num: num = num - 5;.
+function buyHealth() {
+  gold = gold - 10;
+}
 
 function buyWeapon() {}
 function fightSlime() {}
