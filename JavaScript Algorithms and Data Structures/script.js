@@ -95,10 +95,6 @@ button1.onclick = goStore;
 button2.onclick = goCave;
 button3.onclick = fightDragon;
 
-// Step 136
-// After a monster is defeated, the monster's stat box should no longer display.
-// On the first line of the update function, use monsterStats.style.display to change the display value to none.
-
 function update(location) {
   monsterStats.style.display = "none";
   button1.innerText = location["button text"][0];
@@ -211,6 +207,10 @@ function defeatMonster () {
  xpText.innerText = xp;
  update(locations[4]);
 }
+// Step 137
+// In the lose function, call the update function and pass in the sixth object of your locations array. Note that you haven't created this object just yet.
+
 function lose () {
+  update(locations[5]);
   
 }
