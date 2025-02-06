@@ -96,13 +96,9 @@ const locations = [
     name: "lose",
     "button text": ["REPLAY?", "REPLAY?", "REPLAY?"],
     "button functions": [restart, restart, restart],
-    text: "You die. &#x2620;"
+    text: "You die. &#x2620;",
   },
 ];
-// Step 139
-// In the locations array, add another object at the end. Set the name property to "lose", set "button text" to an array with three "REPLAY?" strings, set "button functions" to an array with three restart variables, and set text to "You die. &#x2620;".
-// In a later step, you will update the code for the &#x2620; emoticon text to properly display on the page.
-
 
 // initialize buttons.
 button1.onclick = goStore;
@@ -195,6 +191,9 @@ function goFight() {
   monsterName.innerText = monsters[fighting].name;
   monsterHealthText.innerText = monsterHealth;
 }
+// Step 140
+// Back to your attack function - inside the else if block, create another if and else statement. If the player is fighting the dragon (fighting would be 2), call the winGame function. Move the defeatMonster() call to the else block.
+// For this step, you will need to use the strict equality (===) operator to check if fighting is equal to 2.
 
 function attack() {
   text.innerText = "The " + monsters[fighting].name + " attacks.";
@@ -208,7 +207,11 @@ function attack() {
   if (health <= 0) {
     lose();
   } else if (monsterHealth <= 0) {
-    defeatMonster();
+    if (fighting === 2) {
+      winGame();
+    } else {
+      defeatMonster();
+    }
   }
 }
 
