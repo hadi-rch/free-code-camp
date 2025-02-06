@@ -34,6 +34,30 @@ const weapons = [
     power: 100,
   },
 ];
+// Step 110
+// Now you can start the code to fight monsters. To keep your code organized,
+// your fightDragon function has been moved for you to be near the other fight functions.
+// Below your weapons array, define a monsters variable and assign it an array.
+// Set that array to have three objects, each with a name, level, and health properties.
+// The first object's values should be "slime", 2, and 15, in order. The second should
+// be "fanged beast", 8, and 60. The third should be "dragon", 20, and 300.
+const monsters = [
+  {
+    name: "slime",
+    level: 2,
+    health: 15,
+  },
+  {
+    name: "fanged beast",
+    level: 8,
+    health: 60,
+  },
+  {
+    name: "dragon",
+    level: 20,
+    health: 300,
+  },
+];
 
 const locations = [
   {
@@ -121,16 +145,13 @@ function buyWeapon() {
     button2.onclick = sellWeapon;
   }
 }
-// Step 109
-// Use an else statement to run when the inventory length is not more than one. 
-// Set the text.innerText to say "Don't sell your only weapon!" .
 function sellWeapon() {
   if (inventory.length > 1) {
     gold += 15;
     goldText.innerText = gold;
     let currentWeapon = inventory.shift();
     text.innerText = "You sold a " + currentWeapon + ".";
-    text.innerText += " In your inventory you have: " + inventory  + ".";
+    text.innerText += " In your inventory you have: " + inventory + ".";
   } else {
     text.innerText = "Don't sell your only weapon!";
   }
