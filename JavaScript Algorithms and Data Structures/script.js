@@ -15,14 +15,25 @@ const goldText = document.querySelector("#goldText");
 const monsterStats = document.querySelector("#monsterStats");
 const monsterName = document.querySelector("#monsterName");
 const monsterHealthText = document.querySelector("#monsterHealth");
+// Step 35
+// In the previous project, you learned how to work with 
+// single line and multi-line comments like this:
+// Example Code
+// // I am a single-line comment
+
+// /*
+//   I am a multi-line comment
+// */
+// Add a single-line comment that says initialize buttons.
+
+
+// initialize buttons.
 function goStore() {
   console.log("Going to store.");
 }
 function goCave() {
   console.log("Going to cave.");
 }
-// Step 34
-// Now create a fightDragon function that prints "Fighting dragon." to the console.
 function fightDragon() {
   console.log("Fighting dragon.");
 }
