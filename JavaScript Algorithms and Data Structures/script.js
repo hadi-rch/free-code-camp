@@ -16,12 +16,20 @@ const monsterStats = document.querySelector("#monsterStats");
 const monsterName = document.querySelector("#monsterName");
 const monsterHealthText = document.querySelector("#monsterHealth");
 
-const locations  = [];
+// Step 54
+// Your locations array will hold different locations like the store, the cave, and the town square. Each location will be represented as an object.
+// Inside your locations array, add an object. Inside that object add a key called name with a value of "town square".
+// Remember to follow this syntax:
+// Example Code
+// {
+//   key: value
+// }
 
-// Step 53
-// Later on in the curriculum, you will dive deeper into objects. 
-// But for now, it is time to apply what you have learned to your role playing game.
-// Start by deleting your cat object and console statement.
+const locations = [
+  {
+    name: "town square"
+  }
+];
 
 // initialize buttons.
 button1.onclick = goStore;
