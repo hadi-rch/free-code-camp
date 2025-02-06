@@ -15,12 +15,9 @@ const goldText = document.querySelector("#goldText");
 const monsterStats = document.querySelector("#monsterStats");
 const monsterName = document.querySelector("#monsterName");
 const monsterHealthText = document.querySelector("#monsterHealth");
-// Step 31
-// In the previous project, you learned how to create a function like this:
-// Example Code
-// function functionName() {
-// }
-// Create an empty function named goStore.
+// Step 32
+// For now, make your goStore function output 
+// the message "Going to store." to the console.
 function goStore(){
-  
+    console.log("Going to store.");
 }
