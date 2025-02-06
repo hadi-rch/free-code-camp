@@ -21,21 +21,13 @@ button1.onclick = goStore;
 button2.onclick = goCave;
 button3.onclick = fightDragon;
 
-// Step 38
-// The innerText property controls the text that appears in an HTML element. For example:
-// Example Code
-// <p id="info">Demo content</p>
-// Example Code
-// const info = document.querySelector("#info");
-// info.innerText = "Hello World";
-// The example above would change the text of the p element from Demo
-// content to Hello World.
-// When a player clicks your Go to store button, you want to change
-// the buttons and text. Remove the code inside the goStore function
-// and add a line that updates the text of button1 to say "Buy 10 health (10 gold)".
+// Step 39
+// Now, add a line that updates the text of button2 to say 
+// "Buy weapon (30 gold)" and update the text of button3 to say "Go to town square".
 function goStore() {
-  const button1 = document.querySelector("#button1");
   button1.innerText = "Buy 10 health (10 gold)";
+  button2.innerText = "Buy weapon (30 gold)";
+  button3.innerText = "Go to town square";
 }
 function goCave() {
   console.log("Going to cave.");
