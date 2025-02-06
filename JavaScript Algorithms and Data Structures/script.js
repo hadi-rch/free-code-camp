@@ -53,10 +53,6 @@ const monsters = [
   },
 ];
 
-// Step 135
-// The word "Arg!" should have quotes around it. Besides escaping quotes, there is another way you can include quotation marks inside a string.
-// Change the double quotes around the string "The monster screams Arg! as it dies. You gain experience points and find gold." to single quotes ', then add double quotes around "Arg!".
-
 const locations = [
   {
     name: "town square",
@@ -99,7 +95,12 @@ button1.onclick = goStore;
 button2.onclick = goCave;
 button3.onclick = fightDragon;
 
+// Step 136
+// After a monster is defeated, the monster's stat box should no longer display.
+// On the first line of the update function, use monsterStats.style.display to change the display value to none.
+
 function update(location) {
+  monsterStats.style.display = "none";
   button1.innerText = location["button text"][0];
   button2.innerText = location["button text"][1];
   button3.innerText = location["button text"][2];
