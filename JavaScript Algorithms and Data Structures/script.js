@@ -104,9 +104,6 @@ function goStore() {
 function goCave() {
   update(locations[2]);
 }
-function fightDragon() {
-  console.log("Fighting dragon.");
-}
 function goFight() {}
 
 function buyHealth() {
@@ -151,13 +148,21 @@ function sellWeapon() {
     text.innerText = "Don't sell your only weapon!";
   }
 }
-// Step 112
-// In your fightSlime function, set fighting equal to 0 - the
-// index of slime in the monsters array. Remember that you already declared
-// fighting earlier in your code, so you do not need let or const here.
-// On the next line, call the goFight function.
 function fightSlime() {
   fighting = 0;
   goFight();
 }
-function fightBeast() {}
+// Step 113
+// Following the same pattern as the fightSlime function, use that code in
+// the fightBeast and fightDragon functions. Remember that beast is at index 1
+// and dragon is at index 2. Also, remove the console.log call from your fightDragon function.
+
+function fightBeast() {
+  fighting = 1;
+  goFight();
+}
+
+function fightDragon() {
+  fighting = 2;
+  goFight();
+}
