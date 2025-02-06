@@ -123,7 +123,7 @@ function buyWeapon() {
 }
 // Step 109
 // Use an else statement to run when the inventory length is not more than one. 
-// Set the text.innerText to say "Don't sell your only weapon!".
+// Set the text.innerText to say "Don't sell your only weapon!" .
 function sellWeapon() {
   if (inventory.length > 1) {
     gold += 15;
