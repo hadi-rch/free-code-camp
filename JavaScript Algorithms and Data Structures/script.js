@@ -1,6 +1,12 @@
 let xp = 0;
 let health = 100;
-let gold = 250;
+
+// Step 100
+// Now that you are finished testing that portion of the buyWeapon function, 
+// you can set your gold variable back to 50.
+// Note: The HTML has already been updated to reflect the original value of gold.
+
+let gold = 50;
 let currentWeaponIndex = 0;
 let fighting;
 let monsterHealth;
@@ -101,13 +107,7 @@ function buyHealth() {
   }
 }
 
-// Step 99
-// If the player has purchased all of the weapons in the weapons array, the player
-// should not be able to purchase any more and a message should be displayed.
-// Add an else statement for your outer if statement. Inside this new else statement,
-// set text.innerText to "You already have the most powerful weapon!".
-// Test your buyWeapon function again to make sure the message is displayed when
-// the player has the most powerful weapon.
+
 
 function buyWeapon() {
   if (currentWeaponIndex < weapons.length - 1) {
