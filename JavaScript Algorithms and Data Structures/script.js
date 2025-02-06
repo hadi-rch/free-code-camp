@@ -40,13 +40,6 @@ const locations = [
     text: "You enter the cave. You see some monsters.",
   },
 ];
-// Step 71
-// Add a third object to the locations array. Give it the same properties as the other two objects.
-// Set name to cave. Set button text to an array with the strings
-// "Fight slime", "Fight fanged beast", and "Go to town square".
-// Set the "button functions" to an array with the variables
-// fightSlime, fightBeast, and goTown. Set the text property to
-// "You enter the cave. You see some monsters.".
 
 // initialize buttons.
 button1.onclick = goStore;
@@ -70,8 +63,14 @@ function goTown() {
 function goStore() {
   update(locations[1]);
 }
+// Step 72
+// Now that you have a "cave" location object, update your goCave function 
+// to call update and pass that new "cave" location. Remember that this is 
+// the third element in your locations array.
+// Don't forget to remove your console.log call!
+
 function goCave() {
-  console.log("Going to cave.");
+  update(locations[2]);
 }
 function fightDragon() {
   console.log("Fighting dragon.");
