@@ -175,13 +175,6 @@ function goFight() {
   monsterHealthText.innerText = monsterHealth;
 }
 
-// Step 127
-// You can make an else statement conditional by using else if. Here's an example:
-// Example Code
-// if (num > 10) {
-// } else if (num < 5) {
-// }
-// At the end of your if statement, add an else if statement to check if monsterHealth is less than or equal to 0. In your else if, call the defeatMonster function.
 function attack() {
   text.innerText = "The " + monsters[fighting].name + " attacks.";
   text.innerText += " You attack it with your "+ weapons[currentWeaponIndex].name + ".";
@@ -195,7 +188,12 @@ function attack() {
     defeatMonster();
   }
 }
-function dodge() {}
+// Step 129
+// Inside the dodge function, set text.innerText equal to the string "You dodge the attack from the <monster>". Replace <monster> with the name of the monster, using the name property.
+function dodge() {
+  text.innerText = "You dodge the attack from the " + monsters[fighting].name;
+
+}
 function defeatMonster () {
   
 }
