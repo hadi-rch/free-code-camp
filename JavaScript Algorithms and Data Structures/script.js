@@ -52,7 +52,11 @@ const monsters = [
     health: 300,
   },
 ];
-
+// Step 115
+// Add a new object to the end of the locations array, following the same properties 
+// as the rest of the objects. Set name to "fight", "button text" to an array
+//  with "Attack", "Dodge", and "Run", "button functions" to an array with 
+//  attack, dodge, and goTown, and text to "You are fighting a monster.".
 const locations = [
   {
     name: "town square",
@@ -76,6 +80,12 @@ const locations = [
     "button functions": [fightSlime, fightBeast, goTown],
     text: "You enter the cave. You see some monsters.",
   },
+  {
+    name: "fight",
+    "button text": ["Attack", "Dodge", "Run"],
+    "button functions": [attack, dodge, goTown],
+    text: "You are fighting a monster."
+  }
 ];
 
 // initialize buttons.
@@ -151,11 +161,6 @@ function fightSlime() {
   fighting = 0;
   goFight();
 }
-// Step 113
-// Following the same pattern as the fightSlime function, use that code in
-// the fightBeast and fightDragon functions. Remember that beast is at index 1
-// and dragon is at index 2. Also, remove the console.log call from your fightDragon function.
-
 function fightBeast() {
   fighting = 1;
   goFight();
