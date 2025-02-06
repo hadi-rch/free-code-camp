@@ -18,27 +18,25 @@ const monsterHealthText = document.querySelector("#monsterHealth");
 
 const locations  = [];
 
-// Step 50
-// If the property name (key) of an object has a space in it, you will need to use single or double quotes around the name.
-// Here is an example of an object with a property name that has a space:
+// Step 51
+// There are two ways to access the properties of an object: dot notation (.) and bracket notation ([]), similar to an array.
+// Dot notation is what you use when you know the name of the property you're trying to access ahead of time.
 // Example Code
-// const spaceObj = {
-//   "Space Name": "Kirk",
-// };
-// If you tried to write a key without the quotes, it would throw an error:
+// object.property;
+// Here is a sample of using dot notation (.) to read the name property of the developer object:
 // Example Code
-// const spaceObj = {
-//   // Throws an error
-//   Space Name: "Kirk",
-// }; 
-// Add a new property with a key of "Number of legs" and value of 4 to the cat object.
-// Open up the console to see the output.
-
+// const developer = {
+//   name: "Jessica",
+// }
+// // Output: Jessica
+// console.log(developer.name); 
+// Update your console statement to access the name property of the cat object using dot notation.
+// Open up the console to see the name of "Whiskers" logged to the console.
 const cat = {
   name: "Whiskers",
   "Number of legs": 4
 };
-console.log(cat);
+console.log(cat.name);
 
 // initialize buttons.
 button1.onclick = goStore;
