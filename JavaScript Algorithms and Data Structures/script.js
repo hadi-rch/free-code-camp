@@ -121,10 +121,13 @@ function buyWeapon() {
     button2.onclick = sellWeapon;
   }
 }
-// Step 102
-// Create an empty sellWeapon function.
-function sellWeapon(){
-  
+// Step 103
+// Players should not be able to sell their only weapon. Inside the sellWeapon function,
+// add an if statement with a condition that checks if the length of the inventory
+// array is greater than 1.
+function sellWeapon() {
+  if (inventory.length > 1) {
+  }
 }
 function fightSlime() {}
 function fightBeast() {}
