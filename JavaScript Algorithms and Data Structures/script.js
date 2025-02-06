@@ -18,27 +18,10 @@ const monsterHealthText = document.querySelector("#monsterHealth");
 
 const locations  = [];
 
-const cat = {
-  name: "Whiskers",
-  "Number of legs": 4
-};
-
-// Step 52
-// The second way to access the properties of an object is bracket notation ([]). If the property of the object you are trying to access has a space in its name, you will need to use bracket notation.
-// Example Code
-// objectName["property name"];
-// Here is a sample of using bracket notation to read an object's property:
-// Example Code
-// const spaceObj = {
-//   "Space Name": "Kirk",
-// };
-// spaceObj["Space Name"]; // "Kirk"
-// Update your console statement to use bracket notation to access the property "Number of legs" of the cat object.
-// Open up the console to see the output.
-
-console.log(cat.name);
-console.log(cat["Number of legs"]);
-
+// Step 53
+// Later on in the curriculum, you will dive deeper into objects. 
+// But for now, it is time to apply what you have learned to your role playing game.
+// Start by deleting your cat object and console statement.
 
 // initialize buttons.
 button1.onclick = goStore;
