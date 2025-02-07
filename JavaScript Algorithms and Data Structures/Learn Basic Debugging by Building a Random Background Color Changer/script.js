@@ -1,14 +1,3 @@
-// Step 3
-// Now that the ReferenceError is resolved, the console is displaying the correct results for a random number between 0 and 9. But CamperBot was not expecting to see decimal numbers like these:
-
-// Example Code
-// 0.015882899879771095
-// 2.114596286197641
-// 6.040964780197666
-// Update the console statement to print a whole number between 0 and 9.
-
-// Remember that you worked with a method in the Role Playing Game that rounds a number down to the nearest whole number.
-
 const darkColorsArr = [
   "#2C3E50",
   "#34495E",
@@ -22,6 +11,18 @@ const darkColorsArr = [
   "#800020",
 ];
 function getRandomIndex() {
-    console.log(Math.floor(darkColorsArr.length * Math.random()))
-}
-getRandomIndex()
+    console.log(Math.floor(darkColorsArr.length * Math.random()));
+    const randomIndex = Math.floor(darkColorsArr.length * Math.random());
+    return randomIndex;
+  }
+// Step 4
+// CamperBot is finished with building out the getRandomIndex function and it is working as expected.
+
+// But now they are running into this issue when trying to create a reference to the body element in the DOM:
+
+// Example Code
+// Uncaught TypeError: document.queryselector is not a function
+// A TypeError means that the code is trying to perform an operation on a value that is not of the expected type.
+
+// Fix the TypeError by updating the document.queryselector method to the correct method name that selects an element from the DOM.
+const body = document.querySelector("body");
