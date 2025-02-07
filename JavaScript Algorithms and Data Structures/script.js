@@ -218,17 +218,23 @@ function attack() {
   }
 }
 
-// Step 148
-// In the previous project, you learned how to work with the return keyword to return a value from a function like this:
+// Step 149
+// If you play the game in its current state you might notice a bug. If your xp is high enough, the getMonsterAttackValue function will return a negative number, which will actually add to your total health when fighting a monster! You can fix this issue by using a ternary operator to ensure negative values are not returned.
+// The ternary operator is a conditional operator and can be used as a one-line if-else statement. The syntax is: condition ? expressionIfTrue : expressionIfFalse.
+// Here is an example of returning a value using an if-else statement and a refactored example using a ternary operator:
 // Example Code
-// function add(num1, num2) {
-//   return num1 + num2;
+// // if-else statement
+// if (score > 0) {
+//   return score
+// } else {
+//   return default_score
 // }
-// Use the return keyword to return the value of hit at the end of the function.
+// // ternary operator
+// return score > 0 ? score : default_score
 
 function getMonsterAttackValue(level) {
   const hit = (level * 5) - (Math.floor(Math.random() * xp));
-  return hit;
+  return hit > 0 ? hit : 0 ;
 }
 
 function dodge() {
