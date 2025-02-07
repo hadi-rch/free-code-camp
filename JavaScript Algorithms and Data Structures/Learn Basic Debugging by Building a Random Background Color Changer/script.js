@@ -11,17 +11,26 @@ const darkColorsArr = [
   "#800020",
 ];
 function getRandomIndex() {
-    const randomIndex = Math.floor(darkColorsArr.length * Math.random());
-    return randomIndex;
-  }
+  const randomIndex = Math.floor(darkColorsArr.length * Math.random());
+  return randomIndex;
+}
 
-//   Step 5
-//   CamperBot has created a new variable called bgHexCodeSpanElement to store the reference to the span element with the id of bg-hex-code. However, when they try to log that variable to the console, they get null.
-//   null is a special value in JavaScript that represents the absence of a value. This can happen when you try to access a property of an object that doesn't exist.
-//   In this case, CamperBot is not passing in the correct selector to the document.querySelector method.
-//   Fix the document.querySelector("bg-hex-code") line so that it correctly selects the element with the id of bg-hex-code.
+const body = document.querySelector("body");
+const bgHexCodeSpanElement = document.querySelector("#bg-hex-code");
 
-  const body = document.querySelector("body");
-  const bgHexCodeSpanElement = document.querySelector("#bg-hex-code");
+//   Step 6
+// CamperBot has now created a function called changeBackgroundColor that changes the background color of the page to a random color from the darkColorsArr array. The function also displays the hex code for that new color.
+// When they try to test out this function, they notice that the background color is not changing and the text shows the following:
+// Example Code
+// Hex Code: undefined
+// undefined is showing up here because the color variable is not being set correctly.
+// Fix the error in the darkColorsArr[getRandomIndex] line so that the color variable is set to a random color from the darkColorsArr array.
+
+
+function changeBackgroundColor() {
+    const color = darkColorsArr[getRandomIndex()];
   
-  console.log(bgHexCodeSpanElement);
+    bgHexCodeSpanElement.innerText = color;
+    body.style.backgroundColor = color;
+  }
+  changeBackgroundColor();
