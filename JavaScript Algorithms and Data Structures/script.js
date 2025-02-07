@@ -89,7 +89,7 @@ const locations = [
       "Go to town square",
       "Go to town square",
     ],
-    "button functions": [goTown, goTown, goTown],
+    "button functions": [goTown, goTown, easterEgg],
     text: 'The monster screams "Arg!" as it dies. You gain experience points and find gold.',
   },
   {
@@ -111,6 +111,11 @@ const locations = [
     text: "You find a secret game. Pick a number above. Ten numbers will be randomly chosen between 0 and 10. If the number you choose matches one of the random numbers, you win!",
   },
 ];
+
+// Step 173
+// Looking at your "kill monster" object, "button functions" currently has three goTown variables. Replace the third one with easterEgg - this is how a player will access the hidden feature of the game. Do not change the "button text".
+
+// With this, your RPG game is complete! You can now play around - can you defeat the dragon?
 
 // initialize buttons.
 button1.onclick = goStore;
@@ -282,9 +287,6 @@ function pickTwo() {
 function pickEight() {
   pick(8);
 }
-
-// Step 172
-// Since you subtracted health from the player, you need to check if the player's health is less than or equal to 0. If it is, call the lose function.
 
 function pick(guess) {
   const numbers = [];
