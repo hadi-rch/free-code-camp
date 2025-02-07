@@ -12,14 +12,11 @@ function cleanInputString(str) {
 }
 
 /*
-Step 30
-The e in a number input can also be an uppercase E. Regex has a flag for this, however – the i flag, which stands for "insensitive".
-Example Code
-/Hello/i
-The regex above would match hello, Hello, HELLO, and even hElLo because of the i flag. This flag makes your pattern case-insensitive.
-Add the i flag to your regex pattern.
+Step 31
+Number inputs only allow the e to occur between two digits. To match any number, you can use the character class [0-9]. This will match any digit between 0 and 9.
+Add this character class before and after e in your pattern.
 
 */
 function isInvalidInput(str) {
-  const regex = /e/i;
+    const regex = /[0-9]e[0-9]/i;
 }
