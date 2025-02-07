@@ -6,16 +6,14 @@ const clearButton = document.getElementById("clear");
 const output = document.getElementById("output");
 let isError = false;
 /*
-Step 24
-JavaScript provides a .replace() method that enables you to replace characters in a string with another string. This method accepts two arguments. The first argument is the character sequence to be replaced, which can be either a string or a regex pattern. The second argument is the string that replaces the matched sequence.
-Since strings are immutable, the replace method returns a new string with the replaced characters.
-In this example, the replace method is used to replace all instances of the letter l with the number 1 in the string hello.
-Example Code
-"hello".replace(/l/g, "1");
-Use your regex to replace all instances of +, -, and a space in str with an empty string. Return this value.
+Step 25
+Now it is time to test out your cleanInputString function.
+Inside your cleanInputString function, add a console.log() statement with two arguments. The first argument should be the string "original string: " and the second argument should be the str parameter.
+
 */
 
 function cleanInputString(str) {
+  console.log("original string: ", str);
   const regex = /[+-\s]/g;
   return str.replace(regex, "");
 }
