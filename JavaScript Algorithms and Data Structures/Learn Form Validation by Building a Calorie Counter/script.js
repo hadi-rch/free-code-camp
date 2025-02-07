@@ -1,8 +1,4 @@
-/*
-Step 20
-The current pattern will match the exact text "hello", which is not the desired behavior. Instead, you want to search for +, -, or spaces. Replace the pattern in your regex variable with \+- to match plus and minus characters.
-Note that you need to use the backslash \ character to escape the + symbol because it has a special meaning in regular expressions.
-*/
+
 const calorieCounter = document.getElementById("calorie-counter");
 const budgetNumberInput = document.getElementById("budget");
 const entryDropdown = document.getElementById("entry-dropdown");
@@ -10,7 +6,14 @@ const addEntryButton = document.getElementById("add-entry");
 const clearButton = document.getElementById("clear");
 const output = document.getElementById("output");
 let isError = false;
+/*
+Step 21
+In regex, shorthand character classes allow you to match specific 
+characters without having to write those characters in your pattern. 
+Shorthand character classes are preceded with a backslash (\). 
+The character class \s will match any whitespace character. Add this to your regex pattern.
 
+*/
 function cleanInputString(str) {
-    const regex = /\+-/
+    const regex = /\+-\s/ ;
 }
