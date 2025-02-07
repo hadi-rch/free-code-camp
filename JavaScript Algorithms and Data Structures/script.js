@@ -198,7 +198,8 @@ function goFight() {
   monsterHealthText.innerText = monsterHealth;
 }
 
-// Step 150 In your attack function, find the line of code that updates the monsterHealth variable and place it within an if block with a condition that calls the isMonsterHit function.
+// Step 151
+// Add an else statement to the first if statement inside your attack() function. In the else statement, use the += operator to add the text " You miss." to the end of text.innerText.
 
 function attack() {
   text.innerText = "The " + monsters[fighting].name + " attacks.";
@@ -207,6 +208,8 @@ function attack() {
   health -= getMonsterAttackValue(monsters[fighting].level);
   if (isMonsterHit()) { 
     monsterHealth -= weapons[currentWeaponIndex].power + Math.floor(Math.random() * xp) + 1;
+    } else {
+      text.innerText += " You miss." ;
     }
   healthText.innerText = health;
   monsterHealthText.innerText = monsterHealth;
