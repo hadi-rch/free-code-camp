@@ -204,7 +204,8 @@ function attack() {
     " You attack it with your " + weapons[currentWeaponIndex].name + ".";
   health -= getMonsterAttackValue(monsters[fighting].level);
   if (isMonsterHit()) {
-    monsterHealth -= weapons[currentWeaponIndex].power + Math.floor(Math.random() * xp) + 1;
+    monsterHealth -=
+      weapons[currentWeaponIndex].power + Math.floor(Math.random() * xp) + 1;
   } else {
     text.innerText += " You miss.";
     currentWeaponIndex--;
@@ -220,7 +221,7 @@ function attack() {
       defeatMonster();
     }
   }
-  if (Math.random() <= .1 && inventory.length !== 1) {
+  if (Math.random() <= 0.1 && inventory.length !== 1) {
     text.innerText += " Your " + inventory.pop() + " breaks.";
     currentWeaponIndex--;
   }
@@ -265,13 +266,20 @@ function restart() {
   goTown();
 }
 
-function easterEgg () {
+function easterEgg() {
   update(locations[7]);
 }
 
-// Step 159
-// Create an empty pick function with a parameter named guess.
+// Step 160
+// Create two new functions named pickTwo and pickEight.
 
-function pick (guess) {
+// Inside each of those, call the pick() function and pass either 2 or 8 as the argument depending on the function name.
 
+function pickTwo() {
+  pick(2);
 }
+function pickEight() {
+  pick(8);
+}
+
+function pick(guess) {}
