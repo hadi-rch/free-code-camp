@@ -18,19 +18,19 @@ function getRandomIndex() {
 const body = document.querySelector("body");
 const bgHexCodeSpanElement = document.querySelector("#bg-hex-code");
 
-//   Step 6
-// CamperBot has now created a function called changeBackgroundColor that changes the background color of the page to a random color from the darkColorsArr array. The function also displays the hex code for that new color.
-// When they try to test out this function, they notice that the background color is not changing and the text shows the following:
-// Example Code
-// Hex Code: undefined
-// undefined is showing up here because the color variable is not being set correctly.
-// Fix the error in the darkColorsArr[getRandomIndex] line so that the color variable is set to a random color from the darkColorsArr array.
-
-
 function changeBackgroundColor() {
-    const color = darkColorsArr[getRandomIndex()];
-  
-    bgHexCodeSpanElement.innerText = color;
-    body.style.backgroundColor = color;
-  }
-  changeBackgroundColor();
+  const color = darkColorsArr[getRandomIndex()];
+
+  bgHexCodeSpanElement.innerText = color;
+  body.style.backgroundColor = color;
+}
+changeBackgroundColor();
+
+//   Step 7
+// CamperBot is trying to create a new variable called btn to store the reference to the button element with the id of click-btn
+// However, when they try to log the button element to the console, they see that the button element is null.
+// Open up the index.html to see the correct id name for that button element.
+// Then fix the error for the document.querySelector("#click-btn"); line.
+
+const btn = document.querySelector("#click-btn");
+console.log(btn);
