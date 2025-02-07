@@ -102,7 +102,7 @@ const locations = [
     name: "win",
     "button text": ["REPLAY?", "REPLAY?", "REPLAY?"],
     "button functions": [restart, restart, restart],
-    text: "You defeat the dragon! YOU WIN THE GAME! &#x1F389;"
+    text: "You defeat the dragon! YOU WIN THE GAME! &#x1F389;",
   },
 ];
 
@@ -198,19 +198,26 @@ function goFight() {
   monsterHealthText.innerText = monsterHealth;
 }
 
-// Step 155
-// Use the += operator to add " Your <weapon> breaks.", with a space in front of Your, to the end of text.innerText. Replace <weapon> with the last item in the inventory array using inventory.pop(), which will remove the last item in the array AND return it so it appears in your string.
+// Step 156
+// Remember that the increment operator ++ can be used to increase a variable's value by 1. There is also a decrement operator -- that can be used to decrease a variable's value by 1. For example :
+
+// Example Code
+// let num = 10;
+// num--;
+// console.log(num); // Output: 9
+// Decrement the value of currentWeaponIndex in your if statement, after you update the text.
 
 function attack() {
   text.innerText = "The " + monsters[fighting].name + " attacks.";
   text.innerText +=
     " You attack it with your " + weapons[currentWeaponIndex].name + ".";
   health -= getMonsterAttackValue(monsters[fighting].level);
-  if (isMonsterHit()) { 
+  if (isMonsterHit()) {
     monsterHealth -= weapons[currentWeaponIndex].power + Math.floor(Math.random() * xp) + 1;
-    } else {
-      text.innerText += " You miss." ;
-    }
+  } else {
+    text.innerText += " You miss.";
+    currentWeaponIndex--;
+  }
   healthText.innerText = health;
   monsterHealthText.innerText = monsterHealth;
   if (health <= 0) {
@@ -222,18 +229,18 @@ function attack() {
       defeatMonster();
     }
   }
-  if(Math.random() <= .1){
-    text.innerText += " Your "+inventory.pop() + " breaks." ;
+  if (Math.random() <= 0.1) {
+    text.innerText += " Your " + inventory.pop() + " breaks.";
   }
 }
 
 function getMonsterAttackValue(level) {
-  const hit = (level * 5) - (Math.floor(Math.random() * xp));
-  return hit > 0 ? hit : 0 ;
+  const hit = level * 5 - Math.floor(Math.random() * xp);
+  return hit > 0 ? hit : 0;
 }
- 
-function isMonsterHit () {
-  return Math.random() > .2 || health < 20 ;
+
+function isMonsterHit() {
+  return Math.random() > 0.2 || health < 20;
 }
 
 function dodge() {
@@ -250,7 +257,7 @@ function defeatMonster() {
 function lose() {
   update(locations[5]);
 }
-function winGame (){
+function winGame() {
   update(locations[6]);
 }
 
