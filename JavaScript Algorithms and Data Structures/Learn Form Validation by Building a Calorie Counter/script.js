@@ -1,18 +1,19 @@
 /*
-Step 18
-When the user inputs their daily calorie budget, the input field will only accept numerical values. However, if a number is entered with a + or - sign, you'll need to remove those characters.
-Start by declaring a cleanInputString function that takes a str parameter.
-NOTE: Values from an HTML input field are received as strings in JavaScript. You'll need to convert these strings into numbers before performing any calculations. Converting string values into numbers will be covered in a future step.
+Step 19
+To match specific characters in a string, you can use Regular Expressions or "regex" for short.
+Regex in JavaScript is indicated by a pattern wrapped in forward slashes. The following example will match the string literal "hello":
+Example Code
+const regex = /hello/;
+Declare a regex variable and assign it the value from the example above. In future steps, you will update this regex pattern to match specific characters needed for the calorie counter.
 */
-const calorieCounter = document.getElementById('calorie-counter');
-const budgetNumberInput = document.getElementById('budget');
-const entryDropdown = document.getElementById('entry-dropdown');
-const addEntryButton = document.getElementById('add-entry');
-const clearButton = document.getElementById('clear');
-const output = document.getElementById('output');
+const calorieCounter = document.getElementById("calorie-counter");
+const budgetNumberInput = document.getElementById("budget");
+const entryDropdown = document.getElementById("entry-dropdown");
+const addEntryButton = document.getElementById("add-entry");
+const clearButton = document.getElementById("clear");
+const output = document.getElementById("output");
 let isError = false;
 
-function cleanInputString (str) {
-  
+function cleanInputString(str) {
+  const regex = /hello/;
 }
-
