@@ -283,8 +283,8 @@ function pickEight() {
   pick(8);
 }
 
-// Step 171
-// Now add an else statement. Inside, add "Wrong! You lose 10 health!" to the end of text.innerText. Subtract 10 from health and update healthText.innerText.
+// Step 172
+// Since you subtracted health from the player, you need to check if the player's health is less than or equal to 0. If it is, call the lose function.
 
 function pick(guess) {
   const numbers = [];
@@ -303,5 +303,8 @@ function pick(guess) {
     text.innerText += "Wrong! You lose 10 health!";
     health -= 10;
     healthText.innerText = health;
+    if(health <= 0){
+      lose();
+    }
   }
 }
