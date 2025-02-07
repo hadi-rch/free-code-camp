@@ -112,9 +112,6 @@ const locations = [
   },
 ];
 
-// Step 161
-// Add another object to your locations array. Set name to "easter egg", set "button text" to an array with the strings "2", "8", and "Go to town square?", set "button functions" to an array with the variables pickTwo, pickEight, and goTown, and text to "You find a secret game. Pick a number above. Ten numbers will be randomly chosen between 0 and 10. If the number you choose matches one of the random numbers, you win!".
-
 // initialize buttons.
 button1.onclick = goStore;
 button2.onclick = goCave;
@@ -286,4 +283,9 @@ function pickEight() {
   pick(8);
 }
 
-function pick(guess) {}
+// Step 162
+// Inside pick, use const to initialize a variable named numbers and set it to an empty array.
+
+function pick(guess) {
+ const numbers = [];
+}
