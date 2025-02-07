@@ -198,18 +198,6 @@ function goFight() {
   monsterHealthText.innerText = monsterHealth;
 }
 
-// Step 157
-// We don't want a player's only weapon to break. The logical AND operator checks if two statements are true.
-
-// Use the logical AND operator && to add a second condition to your if statement. The player's weapon should only break if inventory.length does not equal (!==) one.
-
-// Here is an example of an if statement with two conditions:
-
-// Example Code
-// if (firstName === "Quincy" && lastName === "Larson") {
-
-// }
-
 function attack() {
   text.innerText = "The " + monsters[fighting].name + " attacks.";
   text.innerText +=
@@ -275,4 +263,12 @@ function restart() {
   healthText.innerText = health;
   xpText.innerText = xp;
   goTown();
+}
+
+// Step 158
+// Now you can add a small easter egg (hidden feature) to your game.
+
+// Create a new function called easterEgg which calls the update function with locations[7] as the argument.
+function easterEgg () {
+  update(locations[7]);
 }
