@@ -197,10 +197,7 @@ function goFight() {
   monsterName.innerText = monsters[fighting].name;
   monsterHealthText.innerText = monsterHealth;
 }
-
-// Step 151
-// Add an else statement to the first if statement inside your attack() function. In the else statement, use the += operator to add the text " You miss." to the end of text.innerText.
-
+\
 function attack() {
   text.innerText = "The " + monsters[fighting].name + " attacks.";
   text.innerText +=
@@ -227,6 +224,13 @@ function attack() {
 function getMonsterAttackValue(level) {
   const hit = (level * 5) - (Math.floor(Math.random() * xp));
   return hit > 0 ? hit : 0 ;
+}
+ 
+// Step 152
+// Now create the isMonsterHit function. This will return a boolean value (true or false) to be used in your if statement. Return the result of the comparison Math.random() > .2.
+
+function isMonsterHit () {
+  return Math.random() > .2;
 }
 
 function dodge() {
