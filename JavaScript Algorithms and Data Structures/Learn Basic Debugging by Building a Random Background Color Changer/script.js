@@ -11,18 +11,17 @@ const darkColorsArr = [
   "#800020",
 ];
 function getRandomIndex() {
-    console.log(Math.floor(darkColorsArr.length * Math.random()));
     const randomIndex = Math.floor(darkColorsArr.length * Math.random());
     return randomIndex;
   }
-// Step 4
-// CamperBot is finished with building out the getRandomIndex function and it is working as expected.
 
-// But now they are running into this issue when trying to create a reference to the body element in the DOM:
+//   Step 5
+//   CamperBot has created a new variable called bgHexCodeSpanElement to store the reference to the span element with the id of bg-hex-code. However, when they try to log that variable to the console, they get null.
+//   null is a special value in JavaScript that represents the absence of a value. This can happen when you try to access a property of an object that doesn't exist.
+//   In this case, CamperBot is not passing in the correct selector to the document.querySelector method.
+//   Fix the document.querySelector("bg-hex-code") line so that it correctly selects the element with the id of bg-hex-code.
 
-// Example Code
-// Uncaught TypeError: document.queryselector is not a function
-// A TypeError means that the code is trying to perform an operation on a value that is not of the expected type.
-
-// Fix the TypeError by updating the document.queryselector method to the correct method name that selects an element from the DOM.
-const body = document.querySelector("body");
+  const body = document.querySelector("body");
+  const bgHexCodeSpanElement = document.querySelector("#bg-hex-code");
+  
+  console.log(bgHexCodeSpanElement);
